@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mimimimimi</title>
+    <script>
+      const mimimimimifyString = (string) => {
+        const resultContainer = document.getElementById("result");
+        resultContainer.innerText = string
+          .split("")
+          .map((letter) => {
+            return "aeou".includes(letter) ? "i" : letter;
+          })
+          .join("");
+      };
+    </script>
+  </head>
+  <body>
+    <h2>mimimimimify a sentence</h2>
+    <textarea id="input" rows="10" cols="70" onChange="mimimimimifyString(this.value)"></textarea>
+    <br>
+    <button
+      onClick="mimimimimifyString(document.getElementById('input').value)"
+    >
+      mimimimimify
+    </button>
+    <p id="result"></p>
+  </body>
+</html>
