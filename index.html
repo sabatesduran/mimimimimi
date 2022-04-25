@@ -11,7 +11,12 @@
         resultContainer.innerText = string
           .split("")
           .map((letter) => {
-            return "aeou".includes(letter) ? "i" : letter;
+            if ("aeou".includes(letter)){
+              return "i";
+            } else if ("AEOU".includes(letter)) {
+              return "I";
+            }
+            return letter;
           })
           .join("");
       };
