@@ -1,0 +1,19 @@
+{
+  "name": "mimimimimi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sabatesduran/mimimimimi",
+  "author": "Dídac Sabatés <sabatesduran@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  }
+}
