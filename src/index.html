@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./index.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet" />
     <title>mimimimimi</title>
     <script>
       const mimimimimifyString = (string) => {
+        const resultCard = document.getElementById("result-card");
         const resultContainer = document.getElementById("result");
         resultContainer.innerText = string
           .split("")
           .map((letter) => {
-            if ("aeou".includes(letter)){
+            if ("aeou".includes(letter)) {
               return "i";
             } else if ("AEOU".includes(letter)) {
               return "I";
@@ -20,18 +21,36 @@
             return letter;
           })
           .join("");
+        resultCard.classList.remove("hidden");
       };
     </script>
   </head>
-  <body>
-    <h2 class="text-3xl font-bold underline">mimimimimify a sentence</h2>
-    <textarea id="input" rows="10" cols="70" onChange="mimimimimifyString(this.value)"></textarea>
-    <br>
+  <body class="p-4 text-center">
+    <h2 class="text-3xl font-bold underline mb-3">mimimimimify a sentence</h2>
+    <textarea
+      id="input"
+      rows="10"
+      cols="70"
+      class="mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="text"
+      placeholder="Sentence to mimimimimify"
+    ></textarea>
+    <br />
     <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       onClick="mimimimimifyString(document.getElementById('input').value)"
     >
       mimimimimify
     </button>
-    <p id="result"></p>
+    <div class="px-6 py-4">
+      <textarea
+        id="result"
+        rows="10"
+        cols="70"
+        class="mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        placeholder="Sintinci ti mimimimimify"
+      ></textarea>
+    </div>
   </body>
 </html>
