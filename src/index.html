@@ -25,29 +25,31 @@
       };
     </script>
   </head>
-  <body class="p-4 text-center">
-    <h2 class="text-3xl font-bold underline mb-3">mimimimimify a sentence</h2>
-    <textarea
-      id="input"
-      rows="10"
-      cols="70"
-      class="mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      type="text"
-      placeholder="Sentence to mimimimimify"
-    ></textarea>
-    <br />
-    <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      onClick="mimimimimifyString(document.getElementById('input').value)"
-    >
-      mimimimimify
-    </button>
-    <div class="px-6 py-4">
+  <body class="p-4">
+    <div class="flex flex-col justify-center items-center text-center">
+      <h2 class="text-3xl font-bold mb-3">mimimimimify a sentence</h2>
       <textarea
+        id="input"
+        rows="10"
+        cols="70"
+        class="resize-none mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        placeholder="Sentence to mimimimimify"
+      ></textarea>
+      <div>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3"
+          onClick="mimimimimifyString(document.getElementById('input').value)"
+        >
+          mimimimimify
+        </button>
+      </div>
+      <textarea
+        disabled
         id="result"
         rows="10"
         cols="70"
-        class="mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        class="resize-none mb-3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight bg-white"
         type="text"
         placeholder="Sintinci ti mimimimimify"
       ></textarea>
